@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Dashboard</title>
+</head>
+<body>
+    <h1>Air Quality Index - Valle de Aburrá</h1>
+    <main>
+        <div class="infodiv">
+            <ul>
+                <li class="li-bien"><h2>Bien 0 - 50</h2>
+                    <p>La calidad del aire se considera satisfactoria y la contaminación atmosférica presenta un riesgo escaso o nulo.</p>
+                </li>
+                <li class="li-moderado"><h2>Moderado 51 - 100</h2>
+                    <p>La calidad del aire es aceptable pero para algunos contaminantes podría existir una preocupación moderada para la salud de un grupo muy pequeño de personas excepcionalmente sensibles a la contaminación ambiental.
+                    </p>
+                </li>
+                <li class="li-pobre"><h2>Pobre 101 - 150</h2>
+                    <p>Los miembros de grupos sensibles pueden padecer efectos en la salud. Probablemente no afectará a las personas en general.
+                    </p>
+                </li>
+                <li class="li-insalubre"><h2>Insalubre 151 - 200</h2>
+                    <p>Todos pueden comenzar a padecer efectos en la salud y los miembros de grupos sensibles pueden padecer efectos más graves.
+                    </p>
+                </li>
+                <li class="li-severo"><h2>Severo 201 - 300</h2>
+                    <p>Advertencias sanitarias de condiciones de emergencia. Son mayores las probabilidades de que toda la población esté afectada.
+                    </p>
+                </li>
+                <li class="li-peligroso"><h2>Peligroso 300+</h2>
+                    <p>Alerta sanitaria: todos pueden padecer efectos sanitarios más graves.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mapboxdiv">
+            {{ fig|safe }}
+        </div>
+    </main>
+</body>
+</html>
